@@ -1,4 +1,3 @@
-
 class Factoriel {
 
   int factoriel(int number) {
@@ -7,8 +6,7 @@ class Factoriel {
       for (int i = 1; i <= number; i++) {
         result *= i;
       }
-    }
-    else {
+    } else {
       result = -1;
     }
     return result;

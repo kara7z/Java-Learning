@@ -1,4 +1,3 @@
-
 class Recurcive {
   boolean exec(String word) {
     boolean isRecursive = true;
