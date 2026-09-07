@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.List;
 
 public class Main {
   static public void main(String args[]) {
@@ -45,14 +46,29 @@ public class Main {
     fibonacci.calcul(6);
     Recurcive recurcive = new Recurcive();
     boolean isRecurcive = recurcive.exec("javavaj");
-    System.out.println(isRecurcive);
-    Languages languages = new Languages();
-    languages.addLanguage("java");
-    languages.addLanguage("PHP");
-    languages.addLanguage("Python");
-    languages.addLanguage("C++");
-    String[] langs = {"Go","Rust","JavaScript","TypeScript"};
-    languages.addLanguages(langs);
-    languages.showLanguges();
+    System.out.printf("This word is %s Recurcive\n", isRecurcive);
+    Languages langues = new Languages();
+    langues.showLanguages();
+
+    Pascal languess = new Pascal();
+    ArrayList<String> listOfLanguages = new ArrayList<>(List.of("PHP", "Java", "C++", "Python"));
+    languess.addLanguages(listOfLanguages);
+    languess.showLanguages();
+    languess.addInFront("Pascal");
+    languess.showLanguages();
+    listOfLanguages.remove("Pascal");
+    Troiseme troiseme = new Troiseme();
+    System.out.println("Le troisième élément est " + troiseme.getThird());
+    RemoveIndex rmI = new RemoveIndex();
+    rmI.removeLanguage(2);
+    System.out.println(rmI.langues);
+    Reverse reverse = new Reverse();
+    reverse.reverse();
+    StringSearch search = new StringSearch();
+    boolean isFounded = search.Search("java");
+    String founded = "Founded";
+    if (!isFounded)
+      founded = "not founded";
+    System.out.printf("This name is %s \n", founded);
   }
 }
