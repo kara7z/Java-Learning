@@ -1,21 +1,14 @@
 import java.util.ArrayList;
+import java.util.List;
 
 class Languages {
-  ArrayList<String> languages = new ArrayList<>();
+  ArrayList<String> langues = new ArrayList<>(List.of("PHP", "Java", "C++", "Python"));
 
-  void showLanguges() {
-    for (String l : languages) {
+  void showLanguages() {
+    System.out.println(langues);
+    langues.remove("PHP");
+    for (String l : langues) {
       System.out.println(l);
-    }
-  }
-
-  void addLanguage(String language) {
-    languages.add(language);
-  }
-
-  void addLanguages(String[] Languages) {
-    for (String l : Languages) {
-      languages.add(l);
     }
   }
 }
